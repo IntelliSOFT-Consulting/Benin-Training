@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $(document).ready(function () {
+                $('.I111a').hide();
+                $('.I111b').hide();
+                $("#indicatorLevel").change(function () {
+                    if (($(this).val() == "I111a")) {
+                        $('.I111a').show();
+                        $('.I111b').hide();
+                    } else {
+                        $('.I111b').show();
+                        $('.I111a').hide();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <select class="dropdown" id="indicatorLevel" name="indicators">
+            <option disabled="disabled" selected="selected">Please select an indicator</option>
+            <option value="I111a">1.1.1a Population living below the international poverty line</option>
+            <option value="I111b">1.1.1b Employed population living below the international poverty line</option>
+        </select>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table table-bordered I111a">
+            <thead>
+                <tr>
+                    <th>Numerator/Denominator</th>
+                    <th>Values</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Population living below the international poverty line</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total Population</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Table with Diaggregations -->
+    <div class="container">
+        <table class="table table-bordered I111b">
+            <thead>
+                <tr>
+                    <th rowspan="2">Numerator/Denominator</th>
+                    <th colspan="2">Values</th>
+                </tr>
+                <tr>
+                    <th>Female</th>
+                    <th>Male</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Population living below the international poverty line</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total Population</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
