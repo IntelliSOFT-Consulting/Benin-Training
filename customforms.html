@@ -8,11 +8,15 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
     </script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+   
+    <!-- Remove this section when in production -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Remove this section when in production -->
 
+    <!-- Script for hiding and showing the different forms -->
     <script>
         $(function () {
             $(document).ready(function () {
@@ -30,9 +34,11 @@
             });
         });
     </script>
+    <!-- Script for hiding and showing the different forms -->
 </head>
 
 <body>
+
     <br>
     <div class="container">
         <select class="dropdown" id="indicatorLevel" name="indicators">
@@ -42,6 +48,8 @@
         </select>
     </div>
     <br>
+
+    <!-- Table with No Diaggregations Start -->
     <div class="container">
         <table class="table table-bordered I111a">
             <thead>
@@ -60,8 +68,9 @@
             </tr>
         </table>
     </div>
+    <!-- Table with No Diaggregations End-->
 
-    <!-- Table with Diaggregations -->
+    <!-- Table with Diaggregations Start-->
     <div class="container">
         <table class="table table-bordered I111b">
             <thead>
@@ -86,6 +95,7 @@
             </tr>
         </table>
     </div>
+    <!-- Table with Diaggregations End-->
 
 </body>
 
